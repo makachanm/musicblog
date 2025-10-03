@@ -8,4 +8,6 @@ for f in *.txt; do
   TXT_FILE=$f ./cutter -i generate.cm -w "${f%.txt}.html"
 done
 
+./cutter -i index.cm -w index.html
+
 echo "Build complete."

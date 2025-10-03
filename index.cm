@@ -1,0 +1,5 @@
+@define(doctitle `MK MUSIC ARCHIVE`)
+
+@define(doccontent exec(`ls -1 *.html | grep -v index.html | awk '{gsub(/\.html$/, ""); printf "<a href=\"./%s.html\">%s</a><br>", $0, $0}'`))
+
+@include(`template.cm`)
