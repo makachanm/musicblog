@@ -1,0 +1,5 @@
+@define(doctitle exec(`head -n 1 $TXT_FILE`))
+
+@define(doccontent exec(`tail -n +3 $TXT_FILE`))
+
+@include(`template.cm`)
