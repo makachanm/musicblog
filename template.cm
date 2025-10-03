@@ -7,12 +7,13 @@
 @define(addul_item input text add(input add(`<li>` add(text `</li>`))))
 @define(format_content content add(`<p>` add(strrep(strrep(content `
 ` `<br>`) `<br><br>` `</p><p>`) `</p>`)))
+@define(mastodon `<a rel="me" href="https://qdon.space/@makanomoyaki">Mastodon</a>`)
 
 <!DOCTYPE html>
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-
+        
         <title>@doctitle()</title>
         <link href="./style.css" rel="stylesheet"/>    
     </head>
@@ -22,6 +23,8 @@
         </div>
         <div class="post-section">
             @format_content(doccontent())
+
+            @mastodon()
         </div>
     </body>
 </html>
